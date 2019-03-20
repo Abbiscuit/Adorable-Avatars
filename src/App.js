@@ -32,13 +32,13 @@ class App extends Component {
     });
 
     return !avatars.length ? (
-      <div className="tc">
-        <h1 className="f1">Opps!</h1>
-        <p className="f2">Loading Now...</p>
+      <div className="tc f2">
+        <h1>Opps!</h1>
+        <p>Loading Now...</p>
       </div>
     ) : (
       <div className="tc">
-        <h1 className="f1">Adorable Avatars</h1>
+        <h1 className="f2">Adorable Avatars</h1>
         <SearchBox searchChange={this.onSearchChange} />
         <Scroll>
           <CardList avatars={filterdAvatars} />
