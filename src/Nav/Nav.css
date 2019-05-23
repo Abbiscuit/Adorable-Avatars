@@ -6,9 +6,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: #c3c3c3;
   height: 10vh;
   margin-bottom: 2rem;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .nav-item-list {
