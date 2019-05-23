@@ -1,0 +1,24 @@
+.logo {
+  font-size: 1.2rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #c3c3c3;
+  height: 10vh;
+  margin-bottom: 2rem;
+}
+
+.nav-item-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 0 1rem;
+}
