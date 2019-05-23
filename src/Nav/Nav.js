@@ -13,9 +13,6 @@ const Nav = () => {
         <h1 className="logo">Adorable Avatar</h1>
       </Link>
       <ul className="nav-item-list">
-        <Link style={linkStyle} to="/">
-          <li className="nav-item">Home</li>
-        </Link>
         <Link style={linkStyle} to="/about">
           <li className="nav-item">About</li>
         </Link>

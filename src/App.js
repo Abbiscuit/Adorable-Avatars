@@ -25,6 +25,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("render");
     const { avatars, searchfield } = this.state;
 
     const filterdAvatars = avatars.filter(avatar => {
@@ -38,7 +39,6 @@ class App extends Component {
       </div>
     ) : (
       <div className="tc">
-        <h1 className="f2">Adorable Avatars</h1>
         <SearchBox searchChange={this.onSearchChange} />
         <Scroll>
           <CardList avatars={filterdAvatars} />
