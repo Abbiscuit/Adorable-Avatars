@@ -5,7 +5,7 @@ const Card = ({ name, email, city, id }) => {
     borderRadius: "50%"
   };
   return (
-    <div className="tc dib ma2 pa3 br3 shadow-3 grow">
+    <div className="tc dib ma2 pa3 br3 shadow-3 grow pointer">
       <img
         src={`https://api.adorable.io/avatars/150/${id}`}
         alt="avatars"
