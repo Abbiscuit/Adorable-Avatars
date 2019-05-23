@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/Adorable-Avatars/static/js/runtime~main.5be6183b.js"
   },
   {
-    "revision": "75fc5aa1140c0b784657",
-    "url": "/Adorable-Avatars/static/js/main.08dbbb38.chunk.js"
+    "revision": "df70dbedba8b09d0d421",
+    "url": "/Adorable-Avatars/static/js/main.ea514e0a.chunk.js"
   },
   {
     "revision": "d1b16453e3031e0061c2",
     "url": "/Adorable-Avatars/static/js/2.4811b0a7.chunk.js"
   },
   {
-    "revision": "75fc5aa1140c0b784657",
+    "revision": "df70dbedba8b09d0d421",
     "url": "/Adorable-Avatars/static/css/main.6944ed4c.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/Adorable-Avatars/static/css/2.d140ac61.chunk.css"
   },
   {
-    "revision": "94d683966ecf3b23b93bfebb80ca48fc",
+    "revision": "58234cd43c493691aa780a51fd4a0e6f",
     "url": "/Adorable-Avatars/index.html"
   }
 ];

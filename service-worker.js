@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Adorable-Avatars/precache-manifest.0d570157349127e2f2e9c81f3c91dffe.js"
+  "/Adorable-Avatars/precache-manifest.b834a894e261c55ae94eef0564f1544c.js"
 );
 
 workbox.clientsClaim();
