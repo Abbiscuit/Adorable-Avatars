@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/adorable-avatars/precache-manifest.bb20f6c38abd1e6e6a53ad07649846e9.js"
+  "/Adorable-Avatars/precache-manifest.0d570157349127e2f2e9c81f3c91dffe.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/adorable-avatars/index.html", {
+workbox.routing.registerNavigationRoute("/Adorable-Avatars/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
