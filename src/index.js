@@ -10,7 +10,7 @@ import Nav from "./Nav/Nav";
 import NotFound from "./NotFound";
 
 ReactDOM.render(
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Nav />
     <Switch>
       <Route exact path="/" component={App} />
