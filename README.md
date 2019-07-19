@@ -1,4 +1,11 @@
-## Adorable Avatars
+# Adorable Avatars
+
+## Plan
+
+- Implement React Hooks
+- Implement Redux
+- Tachyons to styled-components
+- React-router for each avatar page
 
 ### API
 
