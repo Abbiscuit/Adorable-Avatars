@@ -1,3 +1,5 @@
+$shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.2);
+
 .logo {
   font-size: 1.2rem;
 }
@@ -6,19 +8,19 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 10vh;
+  height: 70px;
   margin-bottom: 2rem;
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+  box-shadow: $shadow;
 
-.nav-item-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  list-style-type: none;
-  padding: 0;
-}
+  .nav-item-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+  }
 
-.nav-item {
-  padding: 0 1rem;
+  .nav-item {
+    padding: 0 1rem;
+  }
 }

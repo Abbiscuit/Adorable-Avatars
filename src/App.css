@@ -1,9 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=ABeeZee");
-
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
 
 h1 {
-  font-family: "ABeeZee", sans-serif;
+  font-family: 'ABeeZee', sans-serif;
 }

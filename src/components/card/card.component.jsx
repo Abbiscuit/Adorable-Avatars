@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const Card = ({ name, email, city, id }) => {
   const borderRadius = {
-    borderRadius: "50%"
+    borderRadius: '50%'
   };
   return (
     <div className="tc dib ma2 pa3 br3 shadow-3 grow pointer">
