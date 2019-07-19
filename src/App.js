@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import SearchBox from "./SearchBox";
-import CardList from "./CardList";
-import Scroll from "./Scroll";
-import "./App.css";
+import React, { Component } from 'react';
+import SearchBox from './components/SearchBox';
+import CardList from './components/CardList';
+import Scroll from './components/Scroll';
+import './App.css';
 // import { avatars } from "./avatars.js";
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
     super();
     this.state = {
       avatars: [],
-      searchfield: ""
+      searchfield: ''
     };
   }
 
@@ -19,13 +19,13 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(users => this.setState({ avatars: users }));
   }
 
   render() {
-    console.log("render");
+    console.log('render');
     const { avatars, searchfield } = this.state;
 
     const filterdAvatars = avatars.filter(avatar => {

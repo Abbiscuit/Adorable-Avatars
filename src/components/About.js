@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const About = () => (
   <div className="pa4 tc br3 ma2">

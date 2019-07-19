@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Nav.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './nav.styles.scss';
 
 const Nav = () => {
   const linkStyle = {
-    textDecoration: "none",
-    color: "#333"
+    textDecoration: 'none',
+    color: '#333'
   };
   return (
     <nav className="nav">
