@@ -1,51 +1,23 @@
-import React, { useState, useEffect } from 'react';
-import SearchBox from './components/searchbox/search-box.component';
-import CardList from './components/cardList/card-list.component';
-import Scroll from './components/scroll/scroll.component';
-import './App.css';
-import Spinner from './components/spinner/spinner.component';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Nav from './components/nav/nav.component';
+import NotFound from './pages/not-found.component';
+import AvatarDetails from './components/avatar-details/avatar-details.component';
+import About from './pages/about/about.component';
+import HomePage from './pages/homepage/homepage.component';
 
 function App() {
-  const [avatars, setAvatars] = useState([]);
-  const [searchfield, setSearchField] = useState('');
-
-  useEffect(() => {
-    const getAvatars = async () => {
-      const responseAvatar = await fetch(
-        'https://jsonplaceholder.typicode.com/users'
-      );
-      const jsonAvatar = await responseAvatar.json();
-
-      setAvatars(jsonAvatar);
-    };
-
-    getAvatars();
-  }, []);
-
-  const onSearchChange = e => {
-    setSearchField(e.target.value);
-  };
-
-  const filterdAvatars = avatars.filter(avatar => {
-    return avatar.name.toLowerCase().includes(searchfield.toLowerCase());
-  });
-
   return (
-    <div className="App">
-      {avatars.length ? (
-        <React.Fragment>
-          <SearchBox searchChange={onSearchChange} />
-          <Scroll>
-            <CardList avatars={filterdAvatars} />
-          </Scroll>
-        </React.Fragment>
-      ) : (
-        <div className="App">
-          <Spinner />
-          <p>Loading Now...</p>
-        </div>
-      )}
-    </div>
+    <Router basename={process.env.PUBLIC_URL}>
+      <Nav />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route path="/avatars/:id" component={AvatarDetails} />
+        <Route path="/about" component={About} />
+        <Route component={NotFound} />>
+      </Switch>
+    </Router>
   );
 }
 
