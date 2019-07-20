@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import SearchBox from './components/searchbox/search-box.component';
-import CardList from './components/cardList/cardList.component';
+import CardList from './components/cardList/card-list.component';
 import Scroll from './components/scroll/scroll.component';
 import './App.css';
 

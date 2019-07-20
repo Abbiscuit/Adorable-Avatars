@@ -1,20 +1,18 @@
 import React from 'react';
 
-const Card = ({ name, email, city }) => {
-  const borderRadius = {
-    borderRadius: '50%'
-  };
+import './card.styles.scss';
+
+const Card = ({ name, email }) => {
   return (
-    <div className="tc dib ma2 pa3 br3 shadow-3 grow pointer">
+    <div className="card">
       <img
         src={`https://api.adorable.io/avatars/150/${email}`}
         alt="avatars"
-        style={borderRadius}
+        className="card-image"
       />
       <div>
-        <h2>{name}</h2>
-        <p className="f4">{email}</p>
-        <p className="f5">{city}</p>
+        <h2 className="card-name">{name}</h2>
+        <p className="card-email">{email}</p>
       </div>
     </div>
   );
