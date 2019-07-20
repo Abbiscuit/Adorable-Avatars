@@ -1,6 +1,9 @@
 .scroll {
   overflow-y: scroll;
+
   height: 100vh;
   border: 1px dotted #ddd;
   padding: 0 20px;
+
+  -webkit-overflow-scrolling: touch;
 }
