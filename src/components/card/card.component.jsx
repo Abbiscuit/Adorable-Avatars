@@ -5,10 +5,10 @@ import './card.styles.scss';
 
 const Card = ({ name, email, id }) => {
   return (
-    <Link to={`/${id}`}>
+    <Link to={`/avatars/${id}`}>
       <div className="card">
         <img
-          src={`https://api.adorable.io/avatars/150/${email}`}
+          src={`https://robohash.org/${id}?set=set4`}
           alt="avatars"
           className="card-image"
         />
