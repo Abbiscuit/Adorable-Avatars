@@ -4,16 +4,8 @@ import Card from '../card/card.component';
 const CardList = ({ avatars }) => {
   return (
     <div>
-      {avatars.map((map, i) => {
-        return (
-          <Card
-            key={i}
-            id={avatars[i].id}
-            name={avatars[i].name}
-            email={avatars[i].email}
-            city={avatars[i].address.city}
-          />
-        );
+      {avatars.map(({ id, ...otherProps }) => {
+        return <Card key={id} {...otherProps} />;
       })}
     </div>
   );
