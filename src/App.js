@@ -30,7 +30,7 @@ function App() {
   });
 
   return (
-    <div className="tc">
+    <div className="App">
       {avatars.length ? (
         <React.Fragment>
           <SearchBox searchChange={onSearchChange} />
@@ -39,7 +39,7 @@ function App() {
           </Scroll>
         </React.Fragment>
       ) : (
-        <div className="tc f2">
+        <div className="App">
           <h1>Opps!</h1>
           <p>Loading Now...</p>
         </div>
