@@ -3,6 +3,7 @@ import SearchBox from './components/searchbox/search-box.component';
 import CardList from './components/cardList/card-list.component';
 import Scroll from './components/scroll/scroll.component';
 import './App.css';
+import Spinner from './components/spinner/spinner.component';
 
 function App() {
   const [avatars, setAvatars] = useState([]);
@@ -40,7 +41,7 @@ function App() {
         </React.Fragment>
       ) : (
         <div className="App">
-          <h1>Opps!</h1>
+          <Spinner />
           <p>Loading Now...</p>
         </div>
       )}
