@@ -37,7 +37,7 @@ const AvatarDetails = ({ match }) => {
           <span>{`Tel:  ${phone}`}</span>
           <span>{`Web:  ${website}`}</span>
         </div>
-        <Button> 戻る </Button>
+        <Button> Back </Button>
       </div>
     ) : (
       <div className="avatar-card spinner">
