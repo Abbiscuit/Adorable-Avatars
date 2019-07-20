@@ -1,50 +1,51 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBox from './components/searchbox/search-box.component';
 import CardList from './components/cardList/cardList.component';
 import Scroll from './components/scroll/scroll.component';
 import './App.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      avatars: [],
-      searchfield: ''
-    };
-  }
+function App() {
+  const [avatars, setAvatars] = useState([]);
+  const [searchfield, setSearchField] = useState('');
 
-  onSearchChange = event => {
-    this.setState({ searchfield: event.target.value });
+  useEffect(() => {
+    const getAvatars = async () => {
+      const responseAvatar = await fetch(
+        'https://jsonplaceholder.typicode.com/users'
+      );
+      const jsonAvatar = await responseAvatar.json();
+
+      setAvatars(jsonAvatar);
+    };
+
+    getAvatars();
+  }, []);
+
+  const onSearchChange = e => {
+    setSearchField(e.target.value);
   };
 
-  componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(users => this.setState({ avatars: users }));
-  }
+  const filterdAvatars = avatars.filter(avatar => {
+    return avatar.name.toLowerCase().includes(searchfield.toLowerCase());
+  });
 
-  render() {
-    console.log('render');
-    const { avatars, searchfield } = this.state;
-
-    const filterdAvatars = avatars.filter(avatar => {
-      return avatar.name.toLowerCase().includes(searchfield.toLowerCase());
-    });
-
-    return !avatars.length ? (
-      <div className="tc f2">
-        <h1>Opps!</h1>
-        <p>Loading Now...</p>
-      </div>
-    ) : (
-      <div className="tc">
-        <SearchBox searchChange={this.onSearchChange} />
-        <Scroll>
-          <CardList avatars={filterdAvatars} />
-        </Scroll>
-      </div>
-    );
-  }
+  return (
+    <div className="tc">
+      {avatars.length ? (
+        <React.Fragment>
+          <SearchBox searchChange={onSearchChange} />
+          <Scroll>
+            <CardList avatars={filterdAvatars} />
+          </Scroll>
+        </React.Fragment>
+      ) : (
+        <div className="tc f2">
+          <h1>Opps!</h1>
+          <p>Loading Now...</p>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default App;
