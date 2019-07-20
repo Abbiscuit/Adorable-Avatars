@@ -1,13 +1,15 @@
 import React from 'react';
 import Card from '../card/card.component';
 
+import uuid from 'uuid/v4';
+
 import './card-list.styles.scss';
 
 const CardList = ({ avatars }) => {
   return (
     <div className="card-list">
-      {avatars.map(({ id, ...otherProps }) => {
-        return <Card key={id} {...otherProps} />;
+      {avatars.map(({ ...otherProps }) => {
+        return <Card key={uuid()} {...otherProps} />;
       })}
     </div>
   );

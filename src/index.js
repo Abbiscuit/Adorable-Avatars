@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import About from './pages/about.component';
 import * as serviceWorker from './serviceWorker';
-import 'tachyons';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Nav from './components/nav/nav.component';
 import NotFound from './pages/not-found.component';

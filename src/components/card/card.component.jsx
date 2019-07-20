@@ -2,7 +2,7 @@ import React from 'react';
 
 import './card.styles.scss';
 
-const Card = ({ name, email }) => {
+const Card = ({ name, email, id }) => {
   return (
     <div className="card">
       <img
