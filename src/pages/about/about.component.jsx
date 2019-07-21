@@ -1,14 +1,13 @@
 import React from 'react';
-
-import './about.styles.scss';
+import { AboutContainer, Text, TextDescription } from './about.styles';
 
 const About = () => (
-  <div className="about">
-    <h1 className="title">Adorable Avatar</h1>
-    <p className="description">
+  <AboutContainer>
+    <Text>Adorable Avatar</Text>
+    <TextDescription>
       サーチボックスに入力された文字にマッチするアバター達の画像を表示することができます。
-    </p>
-  </div>
+    </TextDescription>
+  </AboutContainer>
 );
 
 export default About;
