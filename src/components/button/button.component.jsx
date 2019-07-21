@@ -1,12 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import { ButtonStyle } from './button.styles';
+import { ButtonLink } from './button.styles';
 
-const Button = props => (
-  <Link to="/">
-    <ButtonStyle>{props.children}</ButtonStyle>
-  </Link>
-);
+const Button = props => <ButtonLink to="/">{props.children}</ButtonLink>;
 
 export default Button;

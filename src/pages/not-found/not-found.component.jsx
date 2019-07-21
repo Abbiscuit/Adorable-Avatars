@@ -10,7 +10,7 @@ const NotFound = () => {
         お探しのページは見つかりませんでした。
         {/* <i>{props.location.pathname}</i> */}
       </Text>
-      <Button>Go Back</Button>
+      <Button to="/">Go Back</Button>
     </Container>
   );
 };
