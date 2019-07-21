@@ -20,3 +20,7 @@ node-sass
 ### Routing
 
 react-router(v5)使用
+
+#### その他
+
+当初英語にてcommitメッセージを書いていましたが、途中GitHub Flowなどを学び、日本語へ変更しました。
