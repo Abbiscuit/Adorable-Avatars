@@ -4,7 +4,7 @@ import CardList from '../cardList/card-list.component';
 import Scroll from '../scroll/scroll.component';
 import Spinner from '../spinner/spinner.component';
 
-import './directory.styles.scss';
+import { TextMessage, DirectoryContainer } from './directory.styles';
 
 const Directory = () => {
   const [avatars, setAvatars] = useState([]);
@@ -32,7 +32,7 @@ const Directory = () => {
   });
 
   return (
-    <div className="directory">
+    <DirectoryContainer>
       {avatars.length ? (
         <React.Fragment>
           <SearchBox searchChange={onSearchChange} />
@@ -40,19 +40,19 @@ const Directory = () => {
             {filterdAvatars.length ? (
               <CardList avatars={filterdAvatars} />
             ) : (
-              <p className="message">
+              <TextMessage>
                 入力内容にマッチするアバターが見つかりませんでした...
-              </p>
+              </TextMessage>
             )}
           </Scroll>
         </React.Fragment>
       ) : (
-        <div className="directory">
+        <DirectoryContainer>
           <Spinner />
           <p>Loading Now...</p>
-        </div>
+        </DirectoryContainer>
       )}
-    </div>
+    </DirectoryContainer>
   );
 };
 

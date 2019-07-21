@@ -1,18 +1,20 @@
 import React from 'react';
-
-import './search-box.styles.scss';
+import {
+  SearchBoxContainer,
+  SearchBoxInput,
+  SearchBoxText
+} from './search-box.styles';
 
 const SearchBox = ({ searchChange }) => {
   return (
-    <div className="search-box">
-      <input
+    <SearchBoxContainer>
+      <SearchBoxInput
         type="search"
         placeholder="アバターを検索"
         onChange={searchChange}
-        className="search-box-input"
       />
-      <p>アルファベットでタイプしてみよう！</p>
-    </div>
+      <SearchBoxText>アルファベットでタイプしてみよう！</SearchBoxText>
+    </SearchBoxContainer>
   );
 };
 

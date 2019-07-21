@@ -1,9 +1,8 @@
 import React from 'react';
-
-import './scroll.styles.scss';
+import { ScrollContainer } from './scroll.styles';
 
 const Scroll = props => {
-  return <div className="scroll">{props.children}</div>;
+  return <ScrollContainer>{props.children}</ScrollContainer>;
 };
 
 export default Scroll;

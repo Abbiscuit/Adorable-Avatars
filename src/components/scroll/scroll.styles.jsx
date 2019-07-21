@@ -1,4 +1,6 @@
-.scroll {
+import styled from 'styled-components';
+
+export const ScrollContainer = styled.div`
   overflow-y: scroll;
 
   height: 100vh;
@@ -6,4 +8,4 @@
   padding: 0 2rem;
 
   -webkit-overflow-scrolling: touch;
-}
+`;
