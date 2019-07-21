@@ -2,7 +2,12 @@ import React, { useState, useEffect } from 'react';
 import Spinner from '../spinner/spinner.component';
 import Button from '../button/button.component';
 
-import './avatar-details.styles.scss';
+import {
+  AvatarCardContainer,
+  AvatarImage,
+  AvatarProfile,
+  AvatarText
+} from './avatar-details.styles';
 
 const AvatarDetails = ({ match }) => {
   const [avatar, setAvatar] = useState([]);
@@ -23,48 +28,27 @@ const AvatarDetails = ({ match }) => {
   {
     const { id, name, username, email, phone, website } = avatar;
     return id ? (
-      <div className="avatar-card">
-        <img
+      <AvatarCardContainer>
+        <AvatarImage
           src={`https://robohash.org/${match.params.id}?set=set4`}
           alt="avatars"
-          className="card-image"
         />
 
-        <div className="avatar-profile">
-          <h2 className="name">{`name: ${name}`}</h2>
-          <span className="username">{`username: ${username}`}</span>
+        <AvatarProfile>
+          <AvatarText>{`name: ${name}`}</AvatarText>
+          <span>{`username: ${username}`}</span>
           <span>{`Email:  ${email}`}</span>
           <span>{`Tel:  ${phone}`}</span>
           <span>{`Web:  ${website}`}</span>
-        </div>
+        </AvatarProfile>
         <Button> Back </Button>
-      </div>
+      </AvatarCardContainer>
     ) : (
-      <div className="avatar-card spinner">
+      <AvatarCardContainer primary>
         <Spinner />
-      </div>
+      </AvatarCardContainer>
     );
   }
 };
 
 export default AvatarDetails;
-/* 
-
-
-<div className="avatar-card">
-        <img
-          src={`https://robohash.org/${match.params.id}?set=set4`}
-          alt="avatars"
-          className="card-image"
-        />
-
-        <div className="avatar-profile">
-          <h2 className="name">{`name: ${name}`}</h2>
-          <span className="username">{`username: ${username}`}</span>
-          <span>{`email: ${email}`}</span>
-          <span>{`phone: ${phone}`}</span>
-          <span>{`web: ${website}`}</span>
-        </div>
-      </div>
-
-*/

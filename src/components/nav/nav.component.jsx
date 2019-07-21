@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './nav.styles.scss';
+import { NavContainer, LogoText, NavList, NavItem } from './nav.styles';
 
 const Nav = () => {
   return (
-    <nav className="nav">
+    <NavContainer>
       <Link to="/">
-        <h1 className="logo">Adorable Avatar</h1>
+        <LogoText>Adorable Avatar</LogoText>
       </Link>
-      <ul className="nav-item-list">
+      <NavList>
         <Link to="/about">
-          <li className="nav-item">アプリについて</li>
+          <NavItem>アプリについて</NavItem>
         </Link>
-      </ul>
-    </nav>
+      </NavList>
+    </NavContainer>
   );
 };
 

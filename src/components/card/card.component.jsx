@@ -1,23 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './card.styles.scss';
+import {
+  CardContainer,
+  ImageStyle,
+  CardProfileContainer,
+  CardText,
+  CardParagraph
+} from './card.styles';
 
 const Card = ({ name, email, id }) => {
   return (
-    <Link to={`/avatars/${id}`}>
-      <div className="card">
-        <img
-          src={`https://robohash.org/${id}?set=set4`}
-          alt="avatars"
-          className="card-image"
-        />
-        <div className="card-profile">
-          <h2 className="card-name">{name}</h2>
-          <p className="card-email">{email}</p>
-        </div>
-      </div>
-    </Link>
+    <CardContainer>
+      <Link to={`/avatars/${id}`}>
+        <ImageStyle src={`https://robohash.org/${id}?set=set4`} alt="avatars" />
+        <CardProfileContainer>
+          <CardText>{name}</CardText>
+          <CardParagraph>{email}</CardParagraph>
+        </CardProfileContainer>
+      </Link>
+    </CardContainer>
   );
 };
 
