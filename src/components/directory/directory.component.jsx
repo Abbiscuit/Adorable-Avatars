@@ -37,7 +37,13 @@ const Directory = () => {
         <React.Fragment>
           <SearchBox searchChange={onSearchChange} />
           <Scroll>
-            <CardList avatars={filterdAvatars} />
+            {filterdAvatars.length ? (
+              <CardList avatars={filterdAvatars} />
+            ) : (
+              <p className="message">
+                入力内容にマッチするアバターが見つかりませんでした...
+              </p>
+            )}
           </Scroll>
         </React.Fragment>
       ) : (
