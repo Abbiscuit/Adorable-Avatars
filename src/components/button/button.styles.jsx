@@ -1,6 +1,10 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const ButtonStyle = styled.button`
+export const ButtonLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #fff;
   width: 10rem;
   height: 4rem;
