@@ -4,12 +4,12 @@ $shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 70px;
-  margin-bottom: 2rem;
+  height: 7rem;
+  margin-bottom: 3.2rem;
   box-shadow: $shadow;
 
   .logo {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 
   .nav-item-list {
@@ -22,5 +22,6 @@ $shadow: 0px 0px 6px 0 rgba(0, 0, 0, 0.2);
 
   .nav-item {
     padding: 0 1rem;
+    font-size: 1.4rem;
   }
 }
