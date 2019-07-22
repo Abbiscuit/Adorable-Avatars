@@ -14,6 +14,12 @@ export const CardContainer = styled.div`
   &:hover {
     opacity: 0.7;
   }
+
+  @media screen and (max-width: 800px) {
+    &:hover {
+      opacity: unset;
+    }
+  }
 `;
 
 export const ImageStyle = styled.img`
@@ -27,22 +33,21 @@ export const CardProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
-  .card-name {
-    margin: 0;
-    font-size: 1.6rem;
-  }
-
-  .card-email {
-    font-size: 1.4rem;
-  }
 `;
 
 export const CardText = styled.h2`
   margin: 0;
   font-size: 1.6rem;
+
+  @media screen and (max-width: 800px) {
+    font-size: 2rem;
+  }
 `;
 
 export const CardParagraph = styled.p`
   font-size: 1.4rem;
+
+  @media screen and (max-width: 800px) {
+    font-size: 1.8rem;
+  }
 `;

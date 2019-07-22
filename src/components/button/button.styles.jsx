@@ -17,4 +17,10 @@ export const ButtonLink = styled(Link)`
   &:hover {
     opacity: 0.7;
   }
+
+  @media screen and (max-width: 800px) {
+    &:hover {
+      opacity: unset;
+    }
+  }
 `;

@@ -9,6 +9,10 @@ export const AboutContainer = styled.div`
 
 export const Text = styled.h1`
   font-size: 3.2rem;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 export const TextDescription = styled.p`

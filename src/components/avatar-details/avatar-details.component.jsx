@@ -35,7 +35,7 @@ const AvatarDetails = ({ match }) => {
         />
 
         <AvatarProfile>
-          <AvatarText>{`name: ${name}`}</AvatarText>
+          <AvatarText>{name}</AvatarText>
           <span>{`username: ${username}`}</span>
           <span>{`Email:  ${email}`}</span>
           <span>{`Tel:  ${phone}`}</span>
