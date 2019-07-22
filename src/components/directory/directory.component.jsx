@@ -21,6 +21,8 @@ const Directory = () => {
     };
 
     getAvatars();
+    console.log('avatars', avatars);
+    console.log('searchfield', searchfield);
   }, []);
 
   const onSearchChange = e => {
