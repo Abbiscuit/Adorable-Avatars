@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const NavContainer = styled.div`
+  background: #fff;
   display: flex;
   justify-content: space-around;
   align-items: center;
