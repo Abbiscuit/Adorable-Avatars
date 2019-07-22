@@ -9,6 +9,7 @@ const SearchBox = ({ searchChange }) => {
   return (
     <SearchBoxContainer>
       <SearchBoxInput
+        aria-label="アバター検索"
         type="search"
         placeholder="アバターを検索"
         onChange={searchChange}
