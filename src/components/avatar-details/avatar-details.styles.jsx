@@ -38,6 +38,10 @@ export const AvatarProfile = styled.div`
 export const AvatarText = styled.h2`
   font-size: 1.8rem;
   text-align: center;
+
+  @media screen and (max-width: 800px) {
+    font-size: 2rem;
+  }
 `;
 
 export const UserNameSpan = styled.span``;
