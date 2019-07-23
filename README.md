@@ -1,5 +1,9 @@
 # Adorable Avatars
 
+Display cat avatars based on characters you typed
+
+検索フォームに入力した文字とマッチするネコのアバターを表示するアプリです
+
 ## Plan
 
 - React Hooks
