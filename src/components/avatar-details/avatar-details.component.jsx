@@ -36,7 +36,7 @@ const AvatarDetails = ({ match }) => {
 
         <AvatarProfile>
           <AvatarText>{name}</AvatarText>
-          <span>{`username: ${username}`}</span>
+          <span>{`ニックネーム: ${username}`}</span>
           <span>{`Email:  ${email}`}</span>
           <span>{`Tel:  ${phone}`}</span>
           <span>{`Web:  ${website}`}</span>
