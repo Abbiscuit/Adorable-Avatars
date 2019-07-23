@@ -12,17 +12,18 @@ export const NavContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     flex-direction: column;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
   }
 `;
 
 export const LogoText = styled(Link)`
   font-size: 2rem;
   font-weight: bold;
+  display: block;
 
   @media screen and (max-width: 800px) {
     font-size: 2.4rem;
-    margin-top: 2rem;
+    margin-top: 3.5rem;
   }
 `;
 
@@ -32,6 +33,7 @@ export const NavList = styled.ul`
   justify-content: space-around;
   list-style-type: none;
   padding: 0;
+  margin: 0;
 `;
 
 export const NavItem = styled.li`
@@ -41,4 +43,5 @@ export const NavItem = styled.li`
 
 export const NavLink = styled(Link)`
   font-size: 1.4rem;
+  margin-top: 1rem;
 `;
