@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const NavContainer = styled.div`
   background: #fff;
@@ -15,12 +16,13 @@ export const NavContainer = styled.div`
   }
 `;
 
-export const LogoText = styled.h1`
+export const LogoText = styled(Link)`
   font-size: 2rem;
+  font-weight: bold;
 
   @media screen and (max-width: 800px) {
     font-size: 2.4rem;
-    margin: 1rem;
+    margin-top: 2rem;
   }
 `;
 
@@ -33,6 +35,10 @@ export const NavList = styled.ul`
 `;
 
 export const NavItem = styled.li`
-  padding: 0 1rem;
+  display: flex;
+  padding: 1rem;
+`;
+
+export const NavLink = styled(Link)`
   font-size: 1.4rem;
 `;

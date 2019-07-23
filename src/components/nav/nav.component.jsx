@@ -1,18 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import { NavContainer, LogoText, NavList, NavItem } from './nav.styles';
+import {
+  NavContainer,
+  LogoText,
+  NavList,
+  NavItem,
+  NavLink
+} from './nav.styles';
 
 const Nav = () => {
   return (
     <NavContainer>
-      <Link to="/">
-        <LogoText>Adorable Avatar</LogoText>
-      </Link>
+      <LogoText to="/">Adorable Avatar</LogoText>
       <NavList>
-        <Link to="/about">
-          <NavItem>アプリについて</NavItem>
-        </Link>
+        <NavItem>
+          <NavLink to="/about"> アプリについて</NavLink>
+        </NavItem>
       </NavList>
     </NavContainer>
   );
